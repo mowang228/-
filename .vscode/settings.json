@@ -1,0 +1,9 @@
+{
+    "code-runner.executorMap": {
+       "cpp": "if(-not (Test-Path build)){cmake -B build -G \"MinGW Makefiles\"}; cmake --build build --target run"
+    },
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.terminalRoot": "",
+    "code-runner.fileDirectoryAsCwd": false,
+    "code-runner.runInTerminal": true
+}
