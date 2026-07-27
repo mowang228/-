@@ -1,0 +1,112 @@
+套牌车稽查系统 — 开发说明
+============================
+
+一、接入大模型（LLM）接口
+-------------------------
+
+你需要修改的文件（仅此一处）：
+
+  service/LLMService.cpp  →  onAnalyzeInternal() 方法
+
+该文件中有多处 "TODO [接入大模型]" 标记，引导你完成接入。
+
+操作步骤：
+  1. 打开 service/LLMService.cpp
+  2. 找到 onAnalyzeInternal() 函数（约第 48 行）
+  3. 替换函数体中的模拟逻辑：
+     (a) 读取 imagePath 对应的图片文件（可转 base64）
+     (b) 构造 HTTP 请求，调用你的 LLM API
+         建议使用 QNetworkAccessManager（需启用 Qt Network 模块）
+     (c) 解析返回的 JSON，提取 车牌号、车辆品牌、稽查结论
+     (d) 调用 emit analysisCompleted(result) 发出结果
+
+如果需要启用 Qt Network 模块，修改 CMakeLists.txt：
+  1. find_package 行追加 Network
+  2. target_link_libraries 行追加 Qt::Network
+
+当前是模拟演示，1.5 秒后返回固定结果，界面流程已走通。
+
+
+二、接入用户数据库（AuthService）
+--------------------------------
+
+你需要修改的文件（仅此一处）：
+
+  service/AuthService.cpp  →  onLoginInternal() 和 onRegisterInternal() 方法
+
+文件中均有 "TODO [接入用户数据库]" 标记，引导你完成接入。
+
+当前模拟规则：
+  - 登录：任意非空用户名 + 密码 "123456" 即可成功
+  - 注册：任意非空用户名 + 密码 ≥ 6 位即可成功
+
+接入方案建议：
+  方案 A — 本地 SQLite
+    使用 Qt SQL 模块，修改 CMakeLists.txt：
+      find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ... Sql)
+      target_link_libraries(... Qt${QT_VERSION_MAJOR}::Sql)
+    在 onLoginInternal() 中执行 SELECT 查询验证用户
+
+  方案 B — 远程 API
+    使用 QNetworkAccessManager 调用后端接口
+    POST 用户名/密码到服务器，解析返回的 JSON
+
+注意事项：
+  1. 密码不要明文存储，建议用 QCryptographicHash 做 SHA-256 哈希
+  2. 可在 AuthResult 结构体中扩展字段（用户角色、token 等）
+
+
+三、登录/注册窗口说明
+---------------------
+
+实现位置：
+  login/LoginDialog.h/.cpp  — 登录/注册对话框
+
+工作流程：
+  程序启动 → LoginDialog → 登录成功 → MainWindow 主界面
+                        → 关闭窗口 → 直接退出程序
+
+登录/注册切换：
+  - 对话框内通过 QStackedWidget 实现登录页/注册页切换
+  - "密码为 123456 即可登录" 的提示显示在对话框底部
+
+当前用户信息：
+  登录成功后，主窗口标题栏会显示 "当前用户: xxx"
+  可通过 login.loggedInUser() 获取用户名
+
+
+四、项目构建与运行
+-----------------
+
+前提条件（二选一）：
+
+  方式 A — 使用 QT_DIR 环境变量（推荐）
+    打开终端，设置变量后运行：
+      $env:QT_DIR="你的Qt安装路径"       （例如 D:/Qt/6.7.2）
+      $env:PATH+=";你的MinGW/bin路径"    （例如 D:/Qt/Tools/mingw1310_64/bin）
+      cd build
+      cmake ..
+      cmake --build . --target run
+
+  方式 B — 使用 find_package 默认搜索
+    将 CMAKE_PREFIX_PATH 或 Qt6_DIR 设置为 Qt 的 cmake 配置路径
+    或将 Qt 安装到 C:/Qt 目录（CMakeLists.txt 会自动检测）
+
+首次使用请先确保 build 目录存在：
+  mkdir build
+
+
+五、项目文件结构说明
+-------------------
+
+  main.cpp              — 程序入口（先弹出登录窗口，再打开主界面）
+  mainwindow.h/.cpp     — 主窗口界面（三栏布局）
+  style.qss             — 全局样式表（含主界面和登录窗口样式）
+  CMakeLists.txt        — CMake 构建配置
+
+  login/
+    LoginDialog.h/.cpp  — 登录/注册对话框
+
+  service/
+    AuthService.h/.cpp  — 用户认证服务（接入点：替换 onLoginInternal / onRegisterInternal）
+    LLMService.h/.cpp   — 大模型分析服务（接入点：替换 onAnalyzeInternal）
