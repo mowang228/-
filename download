@@ -1,0 +1,27 @@
+# 构建目录（任何人拉取后应重新 cmake -B build）
+build/
+# IDE / 编辑器
+.vscode/settings.json
+.vscode/*.json
+.idea/
+*.swp
+*.swo
+*~
+
+# clangd 缓存
+.cache/
+
+# Qt 自动生成
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*_autogen/
+
+# 运行时临时文件
+tempCodeRunnerFile.*
+*.log
+config.ini
+
+# 系统文件
+Thumbs.db
+.DS_Store

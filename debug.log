@@ -1,0 +1,50 @@
+[16012:12344:0709/153106.071:WARNING:t_skinfilemap.cpp(56)] SGRenderLog:CheckUpdate newMem.OpenMem failed, szNewMem:Local\sgime_skin.v3.filemap.sogouime err:系统错误2: 系统找不到指定的文件。  
+打开Filemap失败: Local\sgime_skin.v3.filemap.sogouime410991d9d07
+[16012:12344:0709/153106.071:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[16012:12344:0709/153106.071:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:3
+[16012:12344:0709/153106.099:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.Dpi120.v3.filemap.sogouime
+[16012:12344:0709/153106.099:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:3
+[16012:12344:0709/153106.099:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:3
+[32796:33252:0709/165442.106:WARNING:t_skinfilemap.cpp(56)] SGRenderLog:CheckUpdate newMem.OpenMem failed, szNewMem:Local\sgime_skin.v2.filemap.sogouime err:系统错误2: 系统找不到指定的文件。  
+打开Filemap失败: Local\sgime_skin.v2.filemap.sogouime410991d9d07
+[32796:33252:0709/165442.109:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[32796:33252:0709/165442.109:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[32796:33252:0709/165442.132:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.Dpi120.v2.filemap.sogouime
+[32796:33252:0709/165442.132:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:2
+[32796:33252:0709/165442.132:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[12456:20648:0709/170037.975:WARNING:t_skinfilemap.cpp(56)] SGRenderLog:CheckUpdate newMem.OpenMem failed, szNewMem:Local\sgime_skin.v2.filemap.sogouime err:系统错误2: 系统找不到指定的文件。  
+打开Filemap失败: Local\sgime_skin.v2.filemap.sogouime410991d9d07
+[12456:20648:0709/170037.975:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[12456:20648:0709/170037.975:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[12456:20648:0709/170037.998:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.Dpi120.v2.filemap.sogouime
+[12456:20648:0709/170037.998:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:2
+[12456:20648:0709/170037.998:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[12456:20648:0709/170040.809:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\comp_border.cfg
+[12456:20648:0709/170040.809:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\cand_wnd_border.cfg
+[12528:48260:0710/115659.480:WARNING:t_skinfilemap.cpp(56)] SGRenderLog:CheckUpdate newMem.OpenMem failed, szNewMem:Local\sgime_skin.v2.filemap.sogouime err:系统错误2: 系统找不到指定的文件。  
+打开Filemap失败: Local\sgime_skin.v2.filemap.sogouime410991d9d07
+[12528:48260:0710/115659.480:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[12528:48260:0710/115659.480:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[12528:48260:0710/115659.526:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.Dpi120.v2.filemap.sogouime
+[12528:48260:0710/115659.526:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:2
+[12528:48260:0710/115659.526:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[12528:48260:0710/115703.036:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\comp_border.cfg
+[12528:48260:0710/115703.036:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\cand_wnd_border.cfg
+[48700:21520:0710/115939.236:WARNING:t_skinfilemap.cpp(56)] SGRenderLog:CheckUpdate newMem.OpenMem failed, szNewMem:Local\sgime_skin.v2.filemap.sogouime err:系统错误2: 系统找不到指定的文件。  
+打开Filemap失败: Local\sgime_skin.v2.filemap.sogouime410991d9d07
+[48700:21520:0710/115939.236:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[48700:21520:0710/115939.236:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[48700:21520:0710/115939.271:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.Dpi120.v2.filemap.sogouime
+[48700:21520:0710/115939.271:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:2
+[48700:21520:0710/115939.271:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[48700:21520:0710/115942.302:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\comp_border.cfg
+[48700:21520:0710/115942.302:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\cand_wnd_border.cfg
+[14516:10604:0710/135303.480:WARNING:t_skinfilemap.cpp(56)] SGRenderLog:CheckUpdate newMem.OpenMem failed, szNewMem:Local\sgime_skin.v2.filemap.sogouime err:系统错误2: 系统找不到指定的文件。  
+打开Filemap失败: Local\sgime_skin.v2.filemap.sogouime410991d9d07
+[14516:10604:0710/135303.480:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[14516:10604:0710/135303.480:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[14516:10604:0710/135303.521:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.Dpi120.v2.filemap.sogouime
+[14516:10604:0710/135303.521:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:2
+[14516:10604:0710/135303.521:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:2
+[14516:10604:0710/135311.682:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\comp_border.cfg
+[14516:10604:0710/135311.682:ERROR:t_layout_border_config.cpp(161)] ParseConfigFile: failed to read file C:\temp\cand_wnd_border.cfg
